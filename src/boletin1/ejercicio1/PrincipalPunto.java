@@ -58,6 +58,13 @@ public class PrincipalPunto {
 		System.out.println("Punto 2: ("+coordenada2.getX() + " , "+coordenada2.getY()+ ")");
 		System.out.println("Punto 3: ("+coordenada3.getX() + " , "+coordenada3.getY()+ ")");
 		
+		coordenada1.setXY(x, y);
+		
+		coordenada1.desplaza(x, y);
+		
+		System.out.println(coordenada1.distancia(coordenada3));
+		
+		
 	}
 
 }

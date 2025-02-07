@@ -30,6 +30,35 @@ public class Punto {
 		
 	}
 	
+	public void setXY(int x, int y) {
+		
+		this.x=x;
+		this.y=y;
+		
+	}
+	
+	public void desplaza(int   dx,   int   dy) {
+		this.x=+dx;
+		this.y=+dy;
+	}
+	
+	public double distancia(Punto p) {
+		
+		double distancia;
+		
+		distancia= Math.sqrt(Math.pow(this.x- p.x,2) + Math.pow(this.y- p.y,2));
+		
+		return distancia;
+		
+	}
+	
+	public String toString() {
+		String coordenadas;
+		coordenadas="( "+this.x + " , "+this.y+" )";
+		return coordenadas;
+	}
+	
+	
 	
 	
 

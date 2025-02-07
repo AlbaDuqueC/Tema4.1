@@ -64,6 +64,16 @@ public class PrincipalPersona {
 					+ per2.getDni());
 			
 		}
+		
+		if(per1.esMayorEdad()) {
+			System.out.println("Es mayor de edad");
+			
+			if(per1.esJubilado()) {
+				System.out.println("Es jubileta");
+			}
+		}else {
+			System.out.println("Es menor de edad");
+		}
 	}
 
 }
