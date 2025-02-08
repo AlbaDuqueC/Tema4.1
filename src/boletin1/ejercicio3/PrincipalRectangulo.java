@@ -17,25 +17,25 @@ public class PrincipalRectangulo {
 		int y2=0;
 		
 		System.out.println("Introduzca las coodenadas de R1:");
-		System.out.print("getX1() = ");
+		System.out.print("X1 = ");
 		x1= sc.nextInt();
-		System.out.print("getY1() = ");
+		System.out.print("Y1 = ");
 		y1=sc.nextInt();
-		System.out.print("getX2() = ");
+		System.out.print("X2 = ");
 		x2=sc.nextInt();
-		System.out.print("getY2() = ");
+		System.out.print("Y2 = ");
 		y2=sc.nextInt();
 		
 		R1= new Rectangulo(x1, y1, x2, y2);
 		
 		System.out.println("Introduzca las coodenadas de R2:");
-		System.out.print("getX1() = ");
+		System.out.print("X1 = ");
 		x1= sc.nextInt();
-		System.out.print("getY1() = ");
+		System.out.print("Y1 = ");
 		y1=sc.nextInt();
-		System.out.print("getX2() = ");
+		System.out.print("X2 = ");
 		x2=sc.nextInt();
-		System.out.print("getY2() = ");
+		System.out.print("Y2 = ");
 		y2=sc.nextInt();
 
 		R2= new Rectangulo(x1, y1, x2, y2);
@@ -71,6 +71,11 @@ public class PrincipalRectangulo {
 		
 		System.out.println("Area 1 = " + Math.abs(R1.getX2()-R1.getX1())*Math.abs( R1.getY2()-R1.getY1()) );
 		System.out.println("Area 1 = " + Math.abs(R2.getX2()-R2.getX1())*Math.abs( R2.getY2()-R2.getY1()) );
+		
+		System.out.println("Calculos desde la clase Rectangulo:");
+		System.out.println("Area: " + R1.getArea());
+		System.out.println("Perimetro: "+ R1.getPerimetro());
+		System.out.println("Info: " + R1.toString());
 		
 	}
 

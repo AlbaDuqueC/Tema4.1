@@ -56,5 +56,34 @@ public class Articulo {
 		}
 
 	}
+	public double getPVP () {
+		double PVP;
+		PVP= this.precio * getIva() * 0.01;
+		return PVP;
+		
+	}
+	public double getPVPDescuento(int descuento) {
+		double precioDesc;
+		precioDesc=  getPVP() *descuento *0.01;
+		return precioDesc;
+	}
+	public boolean vender(int vendido) {
+		boolean vender=false;
+		if (vendido>0 && this.cuantosQuedan>=vendido) {
+			vender=true;		
+		}
+		return vender;
+		
+	}
+	public int almacenar (int almacenar) {
+		int articulos;
+		articulos= almacenar + this.cuantosQuedan;
+		return articulos;
+	}
+	public String toString() {
+		String info;
+		info="Nombre: "+ this.nombre + ", Precio: "+ this.precio + ", Cuantas quedan: "+ this.cuantosQuedan ;
+		return info;
+	}
 
 }

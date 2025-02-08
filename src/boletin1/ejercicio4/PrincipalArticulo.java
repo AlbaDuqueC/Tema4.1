@@ -32,6 +32,20 @@ public class PrincipalArticulo {
 		
 		System.out.println(art.getNombre()+" - Precio: "+ art.getPrecio() + "€ - IVA: "+ Articulo.IVA + "% - PVP: " + ((art.getPrecio() * (Articulo.IVA *0.01)) + art.getPrecio()) + "€");
 		
+		System.out.println("PVP: " + art.getPVP());
+		
+		System.out.println("Precio con descuento: " + art.getPVPDescuento(23));
+		
+		if (art.vender(4)) {
+			System.out.println("Se puede vender");
+		}else {
+			System.out.println("No se puede vender");
+		}
+		
+		System.out.println("Almacenados: " + art.almacenar(5));
+		
+		System.out.println(art.toString());
+		
 		
 	}
 

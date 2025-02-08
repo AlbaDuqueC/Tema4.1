@@ -74,6 +74,10 @@ public class PrincipalPersona {
 		}else {
 			System.out.println("Es menor de edad");
 		}
+		
+		System.out.println("la diferencia entre las personas es "+per1.diferenciaEdad(per2));
+		
+		System.out.println("Informacion de la 1ª persona: "+per1.toString());
 	}
 
 }
