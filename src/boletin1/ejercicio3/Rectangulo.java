@@ -7,6 +7,7 @@ public class Rectangulo {
 	private int x2;
 	private int y2;
 
+	
 	public int getX1() {
 		return x1;
 	}
