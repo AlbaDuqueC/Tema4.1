@@ -21,7 +21,7 @@ public class PrincipalLibro {
 		
 		if(libro1.prestamo(5)) {
 			System.out.println("Se hizo el prestamo correctamente");
-			System.out.println("Libro prestados: "+libro1.getEjemplaresPrestados());
+			System.out.println("Libro prestados: " + libro1.getEjemplaresPrestados());
 			
 		}else {
 			System.out.println("No se pudo realizar el prestamo");
@@ -29,8 +29,32 @@ public class PrincipalLibro {
 		
 		if(libro1.devolucion(5, "hola")) {
 			System.out.println("Se hizo la devolucion correctamente");
-			
+			System.out.println("Ejemplares: " + libro1.getEjemplares());
+			System.out.println("Prestados: " + libro1.getEjemplaresPrestados());
+		}else {
+			System.out.println("No se pudo hacer la devolución");
 		}
+		
+		System.out.println("Info: " + libro1.toString());
+		
+		titulo="si";
+		autor= "Chari";
+		ejemplares= 25;
+		ejemplaresPrestados=8;
+		genero="";
+		
+		libro2= new Libro (titulo, autor);
+		
+		libro2= new Libro (titulo, autor, ejemplares, ejemplaresPrestados);
+		
+		libro2= new Libro (titulo, autor, ejemplares, ejemplaresPrestados, genero);
+		
+		if (libro1.equals(libro2)) {
+			System.out.println("Son iguales");
+		}else {
+			System.out.println("No son iguales");
+		}
+		
 
 	}
 
