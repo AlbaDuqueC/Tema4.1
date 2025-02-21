@@ -8,6 +8,6 @@ public class PrincipalParseToBoolean {
 		System.out.println(parseToBoolean.ParseToBoolean("true"));
 		
 
-	}s
+	}
 
 }
