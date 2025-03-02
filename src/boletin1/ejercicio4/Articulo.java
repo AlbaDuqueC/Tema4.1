@@ -40,7 +40,7 @@ public class Articulo {
 		return IVA;
 	}
 
-	public Articulo(String nombre, double precio, int IVA, int cuantosQuedan) {
+	public Articulo(String nombre, double precio, int cuantosQuedan) {
 
 		this.nombre = nombre;
 
