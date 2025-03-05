@@ -8,9 +8,13 @@ public class PrincipalHora {
 		
 		Scanner sc= new Scanner(System.in);
 		
+		Hora QueHoraEs;
+		
 		int hora;
 		int min;
 		int seg;
+		
+		int inc;
 		
 		System.out.println("Introduce las horas: ");
 		hora=sc.nextInt();
@@ -19,7 +23,17 @@ public class PrincipalHora {
 		System.out.println("Introduce los segundos: ");
 		seg=sc.nextInt();
 		
-		System.out.println(Hora(hora,min,seg));
+		QueHoraEs= new Hora(hora, min, seg);
+		
+		System.out.println("Cuantos segundos quieres incrementar?");
+		
+		inc= sc.nextInt();
+		
+		for(int i=0; i<inc; i++) {
+			QueHoraEs.Incrementa();
+			
+		}
+		System.out.println(QueHoraEs.getHora() +":"+ QueHoraEs.getMin()+":"+QueHoraEs.getSeg());
 
 	}
 
