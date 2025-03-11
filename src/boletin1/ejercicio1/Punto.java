@@ -7,10 +7,18 @@ public class Punto {
 
 	
 
+	/**
+	 * 
+	 * @return devuelve el punto x
+	 */
 	public int getX() {
 		return x;
 	}
 	
+	/**
+	 * Agrega el valor que nos pasa por parametro a nuestro valor x
+	 * @param x
+	 */
 	public void setX (int x) {
 		this.x=x;
 	}
