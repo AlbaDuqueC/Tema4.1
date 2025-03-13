@@ -31,11 +31,16 @@ public class PrincipalEmpleado {
 		
 		case 1 -> {
 			System.out.println("-------------------");
+			
 			empleado= añadirEmpleado();
+			
 			if(ListadoEmpleados.añadirEmpleado(empleado)) {
+				
 				System.out.println("Se ha añadido el nuevo empleado con exito");
+				
 			}else {
 				System.out.println("No se puedo añadir el nuevo empleado");
+				
 			}
 			System.out.println("-------------------");
 		}
@@ -49,7 +54,7 @@ public class PrincipalEmpleado {
 
 			System.out.println("-------------------");
 			System.out.println("Introduce el dni del empleado: ");
-			dni=sc.nextLine();
+			dni=sc.nextLine(); 
 			empleado=new Empleado(dni);
 			
 			System.out.println("Introduce las horas extras: ");
@@ -84,6 +89,11 @@ public class PrincipalEmpleado {
 			System.out.println("Introduce el dni del empleado: ");
 			dni=sc.nextLine();
 			empleado=new Empleado(dni);
+			if(ListadoEmpleados.eliminarEmpleado(empleado)) {
+				System.out.println("ole ole los caracoles");
+			}else {
+				System.out.println("me pego un tiro");
+			}
 			System.out.println("-------------------");
 			
 		}

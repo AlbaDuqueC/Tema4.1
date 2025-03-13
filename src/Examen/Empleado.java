@@ -61,7 +61,7 @@ public class Empleado {
 	}
 
 	public Empleado(String dni) {
-		
+
 		if (dni != null && !dni.isBlank()) {
 			this.dni = dni;
 
@@ -114,8 +114,8 @@ public class Empleado {
 	}
 
 	public static void setImporteHoraExtra(int importe) {
-		if(importe>0) {
-		importeHoraExtra = importe;
+		if (importe > 0) {
+			importeHoraExtra = importe;
 		}
 	}
 
@@ -135,7 +135,7 @@ public class Empleado {
 		return this.dni + " " + this.nombre + " \n Horas Extras: " + this.horaExtra + " \n Sueldo bruto: "
 				+ sueldoBruto();
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(dni);
@@ -144,7 +144,10 @@ public class Empleado {
 	@Override
 	public boolean equals(Object o) {
 		boolean igual = false;
-		if (String.valueOf(this.dni).equals(o)) {
+
+		Empleado emp = (Empleado) o;
+
+		if (this.dni.equals(emp.getDni())) {
 			igual = true;
 		}
 		return igual;

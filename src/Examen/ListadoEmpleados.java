@@ -22,6 +22,11 @@ public class ListadoEmpleados {
 
 	}
 
+	/**
+	 * 
+	 * @param e
+	 * @return
+	 */
 	private static Empleado comprobarEmpleado(Empleado e) {
 		
 		Empleado emp=null;
@@ -39,6 +44,12 @@ public class ListadoEmpleados {
 
 	}
 	
+	/**
+	 * Esta funcion sirve para modificar las horas extra de una persona en concreto
+	 * @param e
+	 * @param h
+	 * @return
+	 */
 	public static boolean modificarHoraExtra(Empleado e, int h) {
 		
 		boolean si=false;
@@ -47,7 +58,7 @@ public class ListadoEmpleados {
 		
 		if(eModificar!=null) {
 			si=true;
-			e.setHoraExtra(h);
+			eModificar.setHoraExtra(h);
 		}
 		
 		return si;
@@ -71,6 +82,7 @@ public class ListadoEmpleados {
 	
 	public static boolean eliminarEmpleado(Empleado e) {
 
+		
 		return lista.remove(e);
 	}
 	
