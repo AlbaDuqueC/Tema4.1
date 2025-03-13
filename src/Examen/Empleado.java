@@ -33,7 +33,8 @@ public class Empleado {
 	private static int importeHoraExtra = 10;
 
 	/**
-	 * Constructor de Empleado que
+	 * Constructor de Empleado que inserta los siguientes parametrso para crear un
+	 * empleado
 	 * 
 	 * @param dni
 	 * @param nombre
@@ -60,6 +61,12 @@ public class Empleado {
 
 	}
 
+	/**
+	 * Constructor de Empleado que inserta los siguientes parametrso para crear un
+	 * empleado.
+	 * 
+	 * @param dni
+	 */
 	public Empleado(String dni) {
 
 		if (dni != null && !dni.isBlank()) {
@@ -68,10 +75,20 @@ public class Empleado {
 		}
 	}
 
+	/**
+	 * Get que devuelve un parametro al llamarlo
+	 * 
+	 * @return devuelve el dni del Empleado
+	 */
 	public String getDni() {
 		return dni;
 	}
 
+	/**
+	 * Set que introduce el nuevo valor para el dni
+	 * 
+	 * @param dni
+	 */
 	public void setDni(String dni) {
 		if (dni != null && !dni.isBlank()) {
 			this.dni = dni;
@@ -79,46 +96,92 @@ public class Empleado {
 		}
 	}
 
+	/**
+	 * Get que devuelve un parametro al llamarlo
+	 * 
+	 * @return devuelve el nombre del empleado
+	 */
 	public String getNombre() {
 		return nombre;
 	}
 
+	/**
+	 * Set que introduce el nuevo valor para el nombre
+	 * 
+	 * @param nombre
+	 */
 	public void setNombre(String nombre) {
 		if (nombre != null && !nombre.isBlank()) {
 			this.nombre = nombre;
 		}
 	}
 
+	/**
+	 * Get que devuelve un parametro al llamarlo
+	 * 
+	 * @return devuelve el valor del sueldoBase de Empleados
+	 */
 	public double getSueldoBase() {
 		return sueldoBase;
 	}
 
+	/**
+	 * Set que introduce el nuevo valor para el sueldoBase
+	 * 
+	 * @param sueldoBase
+	 */
 	public void setSueldoBase(double sueldoBase) {
 		if (sueldoBase > 0) {
 			this.sueldoBase = sueldoBase;
 		}
 	}
 
+	/**
+	 * Get que devuelve un parametro al llamarlo
+	 * 
+	 * @return devuelve el valor de horaExtra de Empleado
+	 */
 	public int getHoraExtra() {
 		return horaExtra;
 	}
 
+	/**
+	 * Set que introduce el nuevo valor para la horas extras
+	 * 
+	 * @param horaExtra
+	 */
 	public void setHoraExtra(int horaExtra) {
 		if (horaExtra >= 0) {
 			this.horaExtra = horaExtra;
 		}
 	}
 
+	/**
+	 * Get que devuelve un parametro al llamarlo
+	 * 
+	 * @return devuelve el valor de importeHoraExtra de Empleado
+	 */
 	public static int getImporteHoraExtra() {
 		return importeHoraExtra;
 	}
 
+	/**
+	 * Set que introduce el nuevo valor para la el importe por hora extra
+	 * 
+	 * @param importe
+	 */
 	public static void setImporteHoraExtra(int importe) {
 		if (importe > 0) {
 			importeHoraExtra = importe;
 		}
 	}
 
+	/**
+	 * Esta funcion es la que calcula el valor de total del importe por todas las
+	 * horas extras realizadas
+	 * 
+	 * @return devuelve el valor calculado de el total de importe de horas extras
+	 */
 	public double calcularComplemento() {
 		return this.horaExtra * importeHoraExtra;
 	}
@@ -127,15 +190,20 @@ public class Empleado {
 		return this.sueldoBase + calcularComplemento();
 	}
 
-	@Override
 	/**
+	 * Esta funcion devolvera todos los datos del empleado
 	 * 
+	 * @return devuelve los datos del empleado
 	 */
+	@Override
 	public String toString() {
 		return this.dni + " " + this.nombre + " \n Horas Extras: " + this.horaExtra + " \n Sueldo bruto: "
 				+ sueldoBruto();
 	}
 
+	/**
+	 * @return devuelve la clave primaria de 
+	 */
 	@Override
 	public int hashCode() {
 		return Objects.hash(dni);
